@@ -19,6 +19,7 @@ let db = {
       likeCount: 5,
       commentCount: 3
     }
+
   ],
   comments: [
     {
@@ -29,6 +30,7 @@ let db = {
     }
   ]
 };
+
 
 const userDetails = {
   // Redux data
@@ -53,3 +55,4 @@ const userDetails = {
     }
   ]
 };
+
