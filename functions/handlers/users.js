@@ -98,6 +98,7 @@ exports.addUserDetails = (req, res) => {
       });
   };
 
+
 // Get own user details
 exports.getAuthenticatedUser = (req, res) => {
     let userData = {};

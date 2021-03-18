@@ -13,11 +13,20 @@ let db = {
   ],
   screams: [
     {
-      userHandle: 'arora',
+      userHandle: 'user',
       body: 'This is a sample scream',
       createdAt: '2019-03-15T10:59:52.798Z',
       likeCount: 5,
       commentCount: 3
+    }
+
+  ],
+  comments: [
+    {
+      userHandle: 'user',
+      screamId: 'vRB2Oi1lswMQgUTw6A5d',
+      body: 'nice one mate!',
+      createdAt: '2019-03-15T10:59:52.798Z'
     }
   ]
 };
