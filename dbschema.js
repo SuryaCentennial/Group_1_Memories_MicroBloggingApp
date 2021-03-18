@@ -21,3 +21,29 @@ let db = {
     }
   ]
 };
+
+
+const userDetails = {
+  // Redux data
+  credentials: {
+    userId: 'I1B8vCOlVaWwDmwz9AZGqbhT60h2',
+    email: 'pal1@gmail.com',
+    handle: 'newone1',
+    createdAt: '2021-03-13T03:20:01.190Z',
+    imageUrl: 'image/dsfsdkfghskdfgs/dgfdhfgdh',
+    bio: 'Hello, my name is user, nice to meet you',
+    website: 'https://user.com',
+    location: 'Lonodn, UK'
+  },
+  likes: [
+    {
+      userHandle: 'user',
+      screamId: 'vRB2Oi1lswMQgUTw6A5d'
+    },
+    {
+      userHandle: 'user',
+      screamId: 'PRf42iYP2spFWtRSXHdO'
+    }
+  ]
+};
+
