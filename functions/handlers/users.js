@@ -98,7 +98,7 @@ exports.addUserDetails = (req, res) => {
       });
   };
 
-  // Get own user details
+// Get own user details
 exports.getAuthenticatedUser = (req, res) => {
     let userData = {};
     db.doc(`/users/${req.user.handle}`)

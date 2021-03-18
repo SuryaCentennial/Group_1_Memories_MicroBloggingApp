@@ -22,6 +22,7 @@ let db = {
   ]
 };
 
+
 const userDetails = {
   // Redux data
   credentials: {
@@ -45,3 +46,4 @@ const userDetails = {
     }
   ]
 };
+
