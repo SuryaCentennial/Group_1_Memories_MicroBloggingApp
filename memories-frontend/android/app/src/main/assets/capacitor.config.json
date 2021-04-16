@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.memories",
+    "appName": "memories",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }

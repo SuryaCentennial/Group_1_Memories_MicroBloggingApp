@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../../util/MyButton';
@@ -14,6 +14,11 @@ import CloseIcon from '@material-ui/icons/Close';
 // Redux stuff
 import { connect } from 'react-redux';
 import { postScream, clearErrors } from '../../redux/actions/dataActions';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+
+const API_KEY = "AIzaSyDkjyE0c148WZjgC4VGOMw-a174VzQjowk";
+
+//const [value, setValue] = React.useState("");
 
 const styles = (theme) => ({
   ...theme,
@@ -36,8 +41,12 @@ class PostScream extends Component {
   state = {
     open: false,
     body: '',
-    errors: {}
+    place: null,
+    errors: {},
+    address: '',
+    coordinates: ''
   };
+  
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({
@@ -56,7 +65,8 @@ class PostScream extends Component {
     this.setState({ open: false, errors: {} });
   };
   handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+    //console.log(this.state.place+" -"+ this.state.place.toString());
+    this.setState({ [event.target.name]: event.target.value + " - " +this.state.address.toString() });
   };
   handleSubmit = (event) => {
     event.preventDefault();
@@ -89,6 +99,18 @@ class PostScream extends Component {
           <DialogTitle>Post a new scream</DialogTitle>
           <DialogContent>
             <form onSubmit={this.handleSubmit}>
+            <div>
+              <GooglePlacesAutocomplete
+                apiKey={API_KEY}
+                onPress={(data) => {
+                  this.setState(
+                    {
+                      address: data.description, // selected address
+                    }
+                  );
+                }}
+              />
+            </div>
               <TextField
                 name="body"
                 type="text"
