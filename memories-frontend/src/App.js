@@ -23,8 +23,10 @@ import axios from 'axios';
 
 const theme = createMuiTheme(themeObject);
 
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.baseURL =
   'http://localhost:5001/memories-284f9/us-central1/api';
+
 
 const token = localStorage.FBIdToken;
 if (token) {

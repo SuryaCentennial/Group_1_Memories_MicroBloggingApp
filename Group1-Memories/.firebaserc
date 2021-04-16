@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "memories-284f9"
+    "default": "memories-284f9",
+    "dev": "memories-284f9"
   }
 }
